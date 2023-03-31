@@ -1,0 +1,30 @@
+.bg-main{
+    background-color: rgb(19, 79, 107);
+    height: 91vh;
+    padding-top: 4%;
+}
+.main-sec{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    /* background-color: aqua; */
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(138, 136, 136);
+}
+.left-sec{
+    width: 50%;
+    background-color: rgb(238, 232, 232);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.right-sec{
+    width: 50%;
+    background-color: skyblue;
+}

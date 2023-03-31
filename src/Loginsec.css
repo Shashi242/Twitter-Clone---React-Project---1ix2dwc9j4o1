@@ -1,0 +1,105 @@
+.bg-main{
+    background-color: rgb(205, 209, 153);
+    height: 91vh;
+    padding-top: 4%;
+}
+.main-sec{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    background-color: aqua;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(138, 136, 136);
+}
+.left-sec{
+    width: 50%;
+    background-color: rgb(238, 232, 232);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-sec{
+    width: 50%;
+    background-color: rgb(82, 188, 230);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: solid 1px skyblue;
+    text-align: center;
+
+}
+
+
+
+.login-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin-top: 5%;
+}
+.twitter-icon{
+    width: 55px !important;
+    height: 55px !important;
+    color: var(--twitter-color);
+    margin-top: 20%;
+}
+.login-main h3{
+    color: gray;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+
+.login-main input{
+    margin-bottom: 7%;
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    padding-left: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: -1px 1px 3px rgb(209, 206, 206);
+}
+.login-main button{
+    width: 65%;
+    height: 30px;
+    background-color: rgb(59, 166, 209);
+    border-radius: 5px;
+    border: none;
+    margin-top: 7%;
+    font-weight: bold;
+    color: aliceblue;
+    cursor: pointer;
+}
+.login-main button:hover{
+    box-shadow: 0 0 5px gray;
+}
+.signup-div{
+    margin-top: 13%;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+}
+
+.signup{
+    cursor: pointer;
+    margin-left: 3px;
+    color: rgb(39, 168, 201);
+    font-size: 14px;
+}
+.signup:hover{
+    color: rgb(28, 107, 172);
+}
+
+.right-sec h3{
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* 82345 */

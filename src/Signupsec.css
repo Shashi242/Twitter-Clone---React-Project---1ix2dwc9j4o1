@@ -1,0 +1,57 @@
+.signupsec-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+.twitter-icon{
+    width: 55px !important;
+    height: 55px !important;
+    color: var(--twitter-color);
+    margin-top: 20%;
+}
+.signupsec-main h3{
+    color: gray;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+
+.signupsec-main input{
+    margin-bottom: 7%;
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    padding-left: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: -1px 1px 3px rgb(209, 206, 206);
+}
+.signupsec-main button{
+    width: 65%;
+    height: 30px;
+    background-color: rgb(59, 166, 209);
+    border-radius: 5px;
+    border: none;
+    margin-top: 10%;
+    font-weight: bold;
+    color: aliceblue;
+    cursor: pointer;
+}
+.signupsec-main button:hover{
+    box-shadow: 0 0 5px gray;
+}
+
+.isreg{
+    font-size: 13px;
+    margin-top: 2%;
+    color: gray;
+}
+.isreglogin{
+    cursor: pointer;
+    margin-left: 3px;
+    color: rgb(39, 168, 201);
+    font-size: 14px;
+}
+.isreglogin:hover{
+    color: rgb(28, 107, 172);
+}

@@ -3,7 +3,9 @@ import "./Feed.css";
 import Post from "./Post";
 import Tweetbox from "./Tweetbox";
 import db from "./firebase";
-function Feed({show1,commentinp,is_inp, setInputfun}) {
+
+
+function Feed({name,email,image}) {
 
     const [posts,setPosts] = useState([]);
 
@@ -19,18 +21,16 @@ function Feed({show1,commentinp,is_inp, setInputfun}) {
                 <h2>Home</h2>
             </div>
             
-            <Tweetbox/>
+            <Tweetbox image={image} />
             {posts.map(post => (
-                <Post show2={show1} displayName={post.displayName}
-                userName={post.userName}
+                <Post displayName={name}
+                userName={email}
                 verified={post.verified}
                 text={post.text}
-                avatar={post.avatar}
+                avatar={image}
                 image={post.image}
                 likes={post.likes}
-                commentinp2={commentinp}
-                is_inp2={is_inp}
-                setInputfun={setInputfun}/>
+                />
             ))}
         </div>
     )

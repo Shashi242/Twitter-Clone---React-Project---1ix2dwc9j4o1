@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./Post.css";
 import { Avatar } from "@mui/material";
 import VerifiedUser from "@mui/icons-material/VerifiedUser";
@@ -7,23 +7,29 @@ import Repeat from "@mui/icons-material/Repeat";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Publish from "@mui/icons-material/Publish";
 
-function Post({ displayName, userName, verified, text, avatar, image, show2, likes, commentinp2, is_inp2, setInputfun }) {
+function Post({ displayName, userName, verified, text, avatar, image, likes }) {
 
     const [likebtn, setLike] = useState(true);
     const [count, setCount] = useState(likes);
-    const [cmnted, setComment] = useState("");
-    const [is_cmnt, set_is_Comnt] = useState(false);
-    
-    const inputRef = useRef(null);
+    const [value, setValue] = useState('');
+    const [output, setOutput] = useState([]);
+    const [comment, setComment] = useState(false);
+
+    // const inputRef = useRef(null);
 
     function ChangeLike() {
         likebtn ? setCount(count + 1) : setCount(count - 1);
         setLike(!likebtn);
         likes++;
     }
-    // let cmnt;
-    function DoComment(){
-        setComment(inputRef.current.value);
+
+    function handleSubmit() {
+        setOutput([...output, value]);
+        setValue('');
+    }
+
+    const handleChange = (event) => {
+        setValue(event.target.value);
     }
 
     return (
@@ -47,7 +53,7 @@ function Post({ displayName, userName, verified, text, avatar, image, show2, lik
                 </div>
                 <img src={image} alt="post" />
                 <div className="post-footer">
-                    <div className="comment-icon" onClick={() => { show2((p) => !p); }}>
+                    <div className="comment-icon" onClick={() => { setComment(!comment) }}>
                         <ChatBubbleOutline fontSize="small" className="post-icon" />
                     </div>
                     <Repeat fontSize="small" className="post-icon" />
@@ -57,13 +63,16 @@ function Post({ displayName, userName, verified, text, avatar, image, show2, lik
                     </div>
                     <Publish fontSize="small" className="post-icon" />
                 </div>
-                <input type="text" ref={inputRef}/>
-                <button type="button" onClick={DoComment}>Comment</button>
-                {cmnted}
-                {/* <div className={is_inp2?"":"invisible"}>  */}
-                {/* {cmntval?commentinp2:""} */}
-                {/* {is_inp2?set_is_Comnt(false):set_is_Comnt(true)} */}
-                {/* </div> */}
+                {
+                    comment ? <div className="comment-inp">
+                        <input type="text" value={value} onChange={handleChange} />
+                        <button type="button" onClick={handleSubmit}>Comment</button>
+                    </div> : ""
+                }
+
+                {output.map((data) =>
+                    (<div className="comment-sec"><Avatar src={avatar} className="comment-dp" /><span className="comment-text">{data}</span></div>)
+                )}
             </div>
         </div>
     );
